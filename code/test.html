@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>second2</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/code/mystyle.css" />
+  <style>
+    :root {
+  --primary: rgb(104, 79, 255);
+  --secondary: rgb(85, 51, 255);
+  --grey900: #0a1931;
+  --grey500: #737d8c;
+  --grey100: #dee2ea;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  flex-wrap: wrap;
+  font-weight: 400;
+}
+p{
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--grey500);
+}
+/* website vitra ko heading */
+.title{
+  display: inline-block;
+  /* border: 1px solid green; */
+  font-size: 28px;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.title::after{
+  content: " ";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 0.2rem;
+  background-color: var(--primary);
+}
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px dotted black;
+}
+.btn{
+  text-transform: uppercase;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 12px;
+
+}
+.btn-primary{
+  background-color: var(--primary);
+  color: white;
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease;
+}
+.btn-primary:hover{
+  color: var(--grey900);
+  border:1px solid  var(--grey100);
+  background-color: #fff;
+}
+.navhero-wrapper {
+  background: linear-gradient(
+    to right,
+    #fff 0%,
+    #fff 65%,
+    var(--grey100) 65%,
+    var(--grey100) 100%
+  );
+}
+.navhero .header {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.navhero .header .navbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.navhero .header .navbar ul {
+  display: flex;
+  gap: 1rem;
+}
+.navhero .header .navbar i {
+  font-size: 24px;
+  color: var(--grey900);
+  display: none;
+}
+.navhero .header .navbar ul li a {
+  color: var(--grey900);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  transition: all 0.3s ease;
+}
+.navhero .header .navbar ul li a:hover {
+  color: var(--primary);
+}
+.navhero .hero{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navhero .hero .left{
+  /* border: 1px solid red; */
+  max-width: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.navhero .hero .left .top{
+  display: flex;
+  flex-direction: column;
+}
+.navhero .hero .left .top h1{
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 60px;
+  margin-bottom: 1rem;
+}
+.navhero .hero .left .top p{
+  margin-bottom: 1rem;
+}
+.navhero .hero .left .top h1 span{
+  color: var(--primary);
+  position: relative;
+}
+.navhero .hero .left .top h1 span::after{
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  left: 0;
+  bottom: 10%;
+  background-color: rgba(104, 79, 255,0.1);
+}
+
+.navhero .hero .left .social-media-wrapper{
+  /* border: 1px solid red; */
+  margin-top: 10rem;
+}
+.navhero .hero .left .social-media-wrapper .social-media-icons-wrapper {
+  display: flex;
+  gap: 12px;
+  
+}
+.navhero .hero .left .social-media-wrapper p{
+  margin-bottom: 1rem;
+  
+}
+.navhero .hero .left .social-media-wrapper .social-media-icons-wrapper .box{
+  height: 48px;
+  width: 48px;
+  border: 1px solid var(--grey100);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--grey900);
+  transition: all 0.3s ease;
+}
+.navhero .hero .left .social-media-wrapper .social-media-icons-wrapper .box:hover{
+  background-color: var(--primary);
+  color: white;
+}
+.navhero .hero .right{
+  width: 600px;
+  position: relative;
+  display: flex;
+  align-items: end;
+}
+.navhero .hero .right .boy{
+  width: 100%;
+}
+.navhero .hero .right .dot{
+  position: absolute;
+  height: 100px;
+  right: 100px;
+  top: 40%;
+  transform: translateY(-50%);
+}
+.identity-wrapper{
+  background: linear-gradient(
+    to right,
+    #f1f3f8 65%,
+    #FFFFFF 100%
+  );
+  /* border: 1px solid green; */
+  position: relative;
+  overflow: hidden;
+}
+.identity-wrapper .circle{
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  transform: translate(-30%, -30%);
+}
+.identity{
+  margin: 4rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.identity > *{
+  z-index: 10;
+}
+.identity .image-wrapper{
+  max-width: 350px;
+  position: relative;
+}
+.identity .image-wrapper::after{
+  content: " ";
+  position: absolute;
+  left: 100%;
+  top: 8%;
+  width: 10%;
+  height: 100%;
+  border-radius:0  10px 10px 0;
+  background-color: white;
+}
+.identity .image-wrapper::before{
+  content: " ";
+  position: absolute;
+  left: 10%;
+  top: 100%;
+  width: 100%;
+  height: 10%;
+  border-radius:0  10px 10px 10px;
+  background-color: white;
+}
+.identity .image-wrapper .boy-2{
+  width: 100%;
+}
+.identity .image-wrapper .dot{
+  position: absolute;
+  top: 20%;
+  width: 20%;
+  left: 0;
+  transform: translateX(-100%);
+}
+.identity .content{
+  max-width: 650px;
+  width: 100%;
+  /* border: 1px solid red; */
+}
+.identity .content h3{
+  color: var(--grey900);
+  max-width: 500px;
+  width: 100%;
+  font-size: 36px;
+  line-height: 42px;
+  margin-bottom: 1rem;
+}
+.identity .content p{
+  font-size: 13px;
+  margin-bottom: 1rem;
+}
+.identity .content .experiences_project_wrapper{
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.identity .content .experiences, .projects{
+  max-width: 250px;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  /* border: 1px solid green; */
+  align-items: center;
+  gap: 1rem;
+}
+.identity .content h5{
+  font-size: 40px;
+  color: var(--primary);
+  font-weight: 400;
+}
+.identity .content .experiences_project_wrapper p{
+  width: 50%;
+}
+.my-selected-work{
+  border: 1px solid green;
+}
+.my-selected-work .projects-wrapper{
+  border: 1px solid green;
+
+}
+.my-selected-work .projects-wrapper .box{
+  width: 500px;
+  height: 300px;
+  border: 1px solid black;
+}
+.my-selected-work .projects-wrapper .box img{
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1100px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+@media screen and (max-width: 440px) {
+  .navhero .header {
+    border: 1px solid red;
+  }
+  .navhero .header .navbar i {
+    display: block;
+    position: relative;
+  }
+  .navhero .header .navbar ul {
+    display: none;
+    position: absolute;
+  }
+  /* .navhero .header .navbar i:hover ~ ul{
+    display: block;
+  } */
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="container-wrapper">
+    <section class="navhero-wrapper">
+      <div class="container">
+        <section class="navhero">
+          <header class="header">
+            <div class="logo">
+              <img src="../assets/navbar/logo.png" alt="" />
+            </div>
+            <nav class="navbar">
+              <ul>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">WORKS</a></li>
+                <li><a href="#">CONTACT</a></li>
+              </ul>
+              <i class="fa-solid fa-bars"></i>
+            </nav>
+          </header>
+
+          <section class="hero">
+            <div class="left">
+              <div class="top">
+                <h1>Hello, I'm Albert, a UI/UX <span>Designer.</span></h1>
+                <p>
+                  Product Designer, UI/UX Designer, and developer based in
+                  Bresil, Over the past 17 years, as an art director and
+                  Designer, i've worked with big companies and up-and-coming
+                  startups.
+                </p>
+
+                <div class="button-wrapper">
+                  <a href="#">
+                    <button class="btn btn-primary" href="#">Hire Me</button>
+                  </a>
+                  <a href="#">
+                    <button class="btn btn-primary" href="#">View work</button>
+                  </a>
+                </div>
+              </div>
+              
+
+              <div class="social-media-wrapper">
+                <p>Follow me on</p>
+                <div class="social-media-icons-wrapper">
+                  <a class="box" href="#"><i class="fa-brands fa-dribbble"></i></a>
+                  <a class="box" href="#">Be</a>
+                  <a class="box" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a class="box" href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="right">
+              <img class="boy" src="../assets/hero/boy.png" alt="" />
+              <img class="dot" src="/assets/hero/Dot.png" alt="" />
+            </div>
+          </section>
+        </section>
+      </div>
+    </section>
+
+    <section class="identity-wrapper">
+      <img class="circle" src="/assets/identity/circle.png" alt="">
+      <div class="container">
+        <section class="identity">
+          <div class="image-wrapper">
+            <img class="boy-2" src="/assets/identity/boy_exp.png" alt="">
+            <img class="dot" src="/assets/identity/Dot.png" alt="">
+          </div>
+          <div class="content">
+            <h3>Product Designer, UI/UX Designer, and Developer based in Brazil.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis alias quidem molestias cumque.
+              Quaerat ratione consequuntur vero accusamus nostrum autem magnam eum rem? Ipsam fugiat iste quae
+              praesentium, quia cupiditate magnam recusandae sit. Tempora, est. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, quam!</p>
+             
+            <div class="experiences_project_wrapper">
+              <div class="experiences">
+                <h5>17+</h5>
+                <p>Years of Experiences</p>
+              </div>
+              <div class="projects">
+                <h5>325+</h5>
+                <p>Completed Projects</p>
+              </div>
+            </div>
+            <div class="button-wrapper">
+              <a href="#">
+                <button class="btn btn-primary">say hi <i class="fa-solid fa-arrow-right"></i></button>
+              </a>
+            </div>
+          </div>
+        </section>
+  
+      </div> 
+      
+    </section>
+
+    <section class="my-selected-work">
+      <div class="container">
+          <h4 class="title">My Selected Work</h4>
+          <div class="projects-wrapper box-wrapper">
+            <div class="projects box">
+              <div class="imgwrapper">
+                <img src="/assets/mySelectedWork/Images1.png" alt="">
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+  </div><!-- container-wrapper ko end -->
+</body>
+
+</html>
